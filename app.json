@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "totp-app",
+    "name": "AuthZ",
     "slug": "totp-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,18 +19,22 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      },
+      "package": "com.samay15jan.authz"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+        }
+      ]
     ],
-    "experiments": {
-      "typedRoutes": true
+    "extra": {
+      "eas": {
+        "projectId": "142f856c-afcd-4bd7-b472-4f71cd250f1b"
+      }
     }
   }
 }
